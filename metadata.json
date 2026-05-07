@@ -1,0 +1,6 @@
+{
+  "name": "Ezigbo Ahia",
+  "description": "Premium African Digital Marketplace for foodstuff, meals, and fast delivery services.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["marketplace", "e-commerce", "food-delivery"]
+}

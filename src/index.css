@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  
+  --color-brand-green: #2D5A27;
+  --color-brand-gold: #F2AF29;
+  --color-brand-cream: #FAF3E0;
+  --color-brand-border: #E6DCC3;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-olive: #5A5A40;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-dark font-sans selection:bg-brand-gold selection:text-brand-green;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-brand-gold text-brand-dark px-8 py-3 rounded-full font-bold text-sm shadow-[4px_4px_0px_#2D5A27] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#2D5A27] transition-all;
+  }
+  
+  .btn-green-outline {
+    @apply border-2 border-brand-green text-brand-green px-8 py-3 rounded-full font-bold text-sm hover:bg-brand-green hover:text-white transition-all;
+  }
+  
+  .btn-green {
+    @apply bg-brand-green text-white px-8 py-3 rounded-full font-bold text-sm shadow-[4px_4px_0px_#F2AF29] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_#F2AF29] transition-all;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl;
+  }
+
+  .border-box {
+    @apply border border-brand-border bg-white rounded-2xl shadow-sm;
+  }
+}
+
